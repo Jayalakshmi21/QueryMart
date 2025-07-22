@@ -28,8 +28,8 @@ An intelligent database query system that converts natural language questions in
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/retail-qa-system.git
-   cd retail-qa-system
+   git clone https://github.com/Jayalakshmi21/QueryMart.git
+   cd QueryMart
    ```
 
 2. **Install dependencies**
@@ -38,19 +38,22 @@ An intelligent database query system that converts natural language questions in
    ```
 
 3. **Set up environment variables**
-   Create a `.env` file in the root directory:
+   Copy `.env.example` to `.env` and update with your credentials:
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` file:
    ```
    API_KEY=your_google_ai_api_key_here
+   DB_USER=root
+   DB_PASSWORD=your_mysql_password
+   DB_HOST=localhost
+   DB_NAME=atliq_tshirts
    ```
 
 4. **Set up MySQL Database**
    - Create a database named `atliq_tshirts`
-   - Update database credentials in `langchain_helper.py`:
-     ```python
-     db_user = "your_username"
-     db_password = "your_password"
-     db_host = "localhost"
-     ```
+   - Your database credentials are configured via environment variables in `.env`
 
 5. **Run the application**
    ```bash
@@ -74,7 +77,8 @@ An intelligent database query system that converts natural language questions in
 ├── few_shots.py           # Example Q&A pairs for training
 ├── test_db.py             # Database testing utilities
 ├── requirements.txt       # Python dependencies
-├── .env                   # Environment variables (not in repo)
+├── .env.example           # Environment variables template
+├── .gitignore            # Git ignore rules
 └── README.md             # Project documentation
 ```
 
@@ -122,6 +126,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
+Jayalakshmi P.E - [GitHub](https://github.com/Jayalakshmi21)
 
-Project Link: [https://github.com/your-username/retail-qa-system](https://github.com/your-username/retail-qa-system)
+Project Link: [https://github.com/Jayalakshmi21/QueryMart](https://github.com/Jayalakshmi21/QueryMart)
